@@ -1,0 +1,52 @@
+<ion-header [translucent]="true">
+  
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button text="Volver" mode="ios" defaultHref="home"></ion-back-button>
+    </ion-buttons>
+    <ion-icon slot="end" class="ion-padding"></ion-icon>
+    <ion-buttons slot="end">
+      <ion-button (click)="abrirMenu()">
+        <ion-icon name="apps"></ion-icon>
+
+      </ion-button>
+    </ion-buttons>
+    <ion-title color="dark" >
+      RegistrApp 
+    </ion-title>
+    
+    <ion-text slot="center">
+      
+    </ion-text>
+    
+  
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content fullscreen>
+  <ion-list>
+    <ion-list-header>
+      <ion-label>Perfil de usuario</ion-label>
+    </ion-list-header>
+    <br>
+    <br>
+    <br>
+    <ion-item>
+      <ion-label>Nombre:</ion-label>
+      <ion-label color="primary">Carlos</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label>Correo:</ion-label>
+     <ion-label>carlos@gmail.com</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label>Contraseña:</ion-label>
+      <ion-label>********</ion-label>
+      <ion-button  expand="block" fill="clear" shape="round">
+        Cambiar
+      </ion-button>
+    </ion-item>
+    
+  </ion-list>
+</ion-content>

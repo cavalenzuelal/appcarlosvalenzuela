@@ -1,0 +1,47 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>RegistrApp</ion-title>
+  </ion-toolbar>
+</ion-header>
+<br>
+<br>
+<br>
+<ion-content class="ion-padding">
+  
+  <form #frm="ngForm" (ngSubmit)="onSubmit()" >
+    <ion-text color="primary" class="ion-text-center">
+      <h1>Sistema de Loggeo </h1>
+    </ion-text>
+    <ion-item>
+      <ion-label position="floating">Usuario</ion-label>
+      <ion-input type="text" name="usuario" [(ngModel)]="usuario.username" clearInput   required></ion-input>
+    </ion-item>
+    <br>
+    <br>
+    <ion-item>
+      <ion-label position="floating">Clave</ion-label>
+      <ion-input type="password" required name="password" [(ngModel)]="usuario.password" ></ion-input>
+    </ion-item>
+    <br>
+    <br>
+    <br>
+    <br>
+    <ion-button color="primary" type="submit" expand="block" class="ion-margin-top" [disabled]="frm.invalid">
+      Acceder
+    </ion-button>
+    
+    
+  </form>
+  <ion-button href="register" color="primary" type="submit" expand="block" class="ion-margin-top" >
+    Registrarte
+  </ion-button>
+  <br>
+  <ion-item>
+    <ion-checkbox slot="start"></ion-checkbox>
+    <ion-label>Recordar contraseña</ion-label>
+  </ion-item>
+  <br>
+
+  <a [routerLink]="['/recuperar']" style="color: rgb(0, 89, 255);">Olvidaste tu contraseña?</a>
+
+</ion-content>
